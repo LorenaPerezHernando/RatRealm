@@ -63,26 +63,22 @@ public class GrowSnake : MonoBehaviour
             //i++;
             i = i + 10;
             Debug.Log("Esperar");
-            StartCoroutine(EsperarDespuesdeColision());
-
-        }  
+                       
+        }
+        
     }
 
-    private void OnCollisionEnter(Collision collision)
+   /* private void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.tag == "Player")
         {
             //NumberTails++;
-            StartCoroutine(EsperarDespuesdeColision()); 
-            
-            
+            GrowSnakeTail();        
         }
     }
-    IEnumerator EsperarDespuesdeColision()
-    {
-        GrowSnakeTail();
-        yield return new WaitForSeconds(10);
-    }
+   AHORA PLAYER DETECTA LA COLISION
+   */ 
+    
 
 
 }

@@ -53,14 +53,19 @@ public class GrowSnake : MonoBehaviour
     }
     */
 
-    private void GrowSnakeTail()
+    public void GrowSnakeTail()
     {        
         for(int i = 0; i < NumberTails; i++)
         {
             GameObject body = Instantiate(tailPrefab);
             tailParts.Add(body); //From list
-            i++;            
-        }    
+            
+            //i++;
+            i = i + 10;
+            Debug.Log("Esperar");
+            StartCoroutine(EsperarDespuesdeColision());
+
+        }  
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -68,8 +73,15 @@ public class GrowSnake : MonoBehaviour
         if(collision.gameObject.tag == "Player")
         {
             //NumberTails++;
-            GrowSnakeTail();
+            StartCoroutine(EsperarDespuesdeColision()); 
+            
+            
         }
+    }
+    IEnumerator EsperarDespuesdeColision()
+    {
+        GrowSnakeTail();
+        yield return new WaitForSeconds(10);
     }
 
 

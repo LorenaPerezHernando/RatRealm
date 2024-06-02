@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class GrowSnake : MonoBehaviour
 {
+    /* Snake Head has the script, adds the tails & follow the head with certain distance */ 
     public GameObject tailPrefab;
-    public int Gap = 5;
+    public int Gap = 5; //Distance from one tail to another
     public int bodySpeed = 5;
 
     private List<GameObject> tailParts = new List<GameObject>();
@@ -14,8 +15,8 @@ public class GrowSnake : MonoBehaviour
 
     void Start()
     {
-        //GrowsSnake(); //GrowsSnake();GrowsSnake();GrowsSnake();GrowsSnake();
-        GrowSnakeTail();
+
+        GrowSnakeTail(); GrowSnakeTail(); GrowSnakeTail(); GrowSnakeTail(); 
     }
 
    
@@ -67,18 +68,5 @@ public class GrowSnake : MonoBehaviour
         }
         
     }
-
-   /* private void OnCollisionEnter(Collision collision)
-    {
-        if(collision.gameObject.tag == "Player")
-        {
-            //NumberTails++;
-            GrowSnakeTail();        
-        }
-    }
-   AHORA PLAYER DETECTA LA COLISION
-   */ 
-    
-
 
 }

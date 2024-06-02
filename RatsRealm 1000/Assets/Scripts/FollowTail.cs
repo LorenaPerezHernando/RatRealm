@@ -10,7 +10,7 @@ public class FollowTail : MonoBehaviour
 
     private void Start()
     {
-       
+
     }
     void Update()
     {
@@ -20,6 +20,7 @@ public class FollowTail : MonoBehaviour
         //So that it doesnt get INSIDE the target, space between target and tail
         if(distance >= 0.7f)
         {
+            print("Hello");
             //Follow, MoveTowars
             transform.position = Vector3.MoveTowards(transform.position, target.transform.position, 2 * Time.deltaTime );
                                                                                                     //distance 
@@ -31,26 +32,5 @@ public class FollowTail : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, target.transform.position, 0 * Time.deltaTime);
         }
     }
-
-    /*private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "Snake")
-        {
-            print("Enter");
-            speed = 0; 
-
-        }
-        transform.position = Vector3.MoveTowards(transform.position, target.transform.position, speed * Time.deltaTime);
-
-    }
-    private void OnCollisionExit(Collision collision)
-    {
-        speed = 5;
-            print("Exit1");
-            transform.position = Vector3.MoveTowards(transform.position, target.transform.position, speed * Time.deltaTime);       
-        
-           
-    }
-    */
 
 }

@@ -63,7 +63,7 @@ public class GrowSnake : MonoBehaviour
             
             //i++;
             i = i + 10;
-            Debug.Log("Esperar");
+            
                        
         }
         

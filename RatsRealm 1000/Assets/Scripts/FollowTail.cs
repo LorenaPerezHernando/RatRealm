@@ -20,15 +20,15 @@ public class FollowTail : MonoBehaviour
         //So that it doesnt get INSIDE the target, space between target and tail
         if(distance >= 0.7f)
         {
-            print("Hello");
+            
             //Follow, MoveTowars
             transform.position = Vector3.MoveTowards(transform.position, target.transform.position, 2 * Time.deltaTime );
                                                                                                     //distance 
-                                                                         //!! Si no contenta,  Añadir variable *speed
+                                                                         //!! Si no contenta,  Aï¿½adir variable *speed
         }
         if(distance <= 0.6f)
         {
-            print("WTF"); 
+            
             transform.position = Vector3.MoveTowards(transform.position, target.transform.position, 0 * Time.deltaTime);
         }
     }
